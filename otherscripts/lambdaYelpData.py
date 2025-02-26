@@ -6,7 +6,7 @@ from datetime import datetime
 from decimal import Decimal
 import base64
 
-API_KEY = "5m8eluY_fu3TyDu81ZGhsht58-Er24p8fGuW2HIfMS2kzy-EZh_vdInr-27B75vpUMWITdV3sW6sMSTH4E56RGvFiyuPwYlaQdV2Jy52x7m0C-v3WjiX98zDF2-7Z3Yx"  
+API_KEY = "*******"  
 HEADERS = {"Authorization": f"Bearer {API_KEY}"}
 
 DYNAMODB_TABLE = "yelp-restaurants"

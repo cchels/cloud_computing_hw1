@@ -26,12 +26,22 @@ $(document).ready(function() {
   }
 
   function callChatbotApi(message) {
+    let userId = sessionStorage.getItem('userId');
+    if (!userId) {
+      userId = 'user_' + Math.random().toString(36).substr(2, 9);
+      sessionStorage.setItem('userId', userId);
+    }
+
+    let time = new Date().toISOString();
+
     // params, body, additionalParams
     return sdk.chatbotPost({}, {
       messages: [{
         type: 'unstructured',
         unstructured: {
-          text: message
+          id: userId,
+          text: message,
+          timestamp: time
         }
       }]
     }, {});
